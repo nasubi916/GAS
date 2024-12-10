@@ -1,9 +1,7 @@
-const discordWebHookURL =
-  "https://discord.com/api/webhooks/1315938661623267328/ltduaOTVUFz30aPxs6nZE4JGMAshLyvVmuf_g82eZgtRUY3MRf_MsVq8TzYK45qUOMMd";
+const discordWebHookURL = process.env.DISCORD_WEBHOOK_URL;
+const spreadsheetId = process.env.SPREADSHEET_ID;
 
 const onOpen = () => {
-  const spreadsheetId =
-    "https://docs.google.com/spreadsheets/d/1kVdZ1z3kLR96kkLb4iTFQdEGSq5jqc4_SV8O3PEPNRs/edit?gid=0#gid=0";
   // const ui = SpreadsheetApp.getUi(); これはスプレッドシート上に追加したとき(コンテナバインド)にしか使えない
   const ui = SpreadsheetApp.openByUrl(spreadsheetId); //スタンドアローンの場合はこっち
   // ↓はコンテナバインドの場合でしか使えない
